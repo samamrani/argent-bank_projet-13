@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { Analytics } from '@vercel/analytics/react';
 import MainLayout from './layout/MainLayout';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -26,6 +27,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>
+      <Analytics />
     </Router>
   );
 }
